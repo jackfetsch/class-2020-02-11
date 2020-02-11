@@ -7,10 +7,22 @@ output: html_document
 
 
 
-```{r}
+```{r setup, include=FALSE}
 library(readxl)
 library(tidyverse)
-
-read_excel("class_enrollment_summary_by_term_2.11.20.xlsx")
+library(janitor)
+library(reprex)
 ```
+
+```{r}
+x <- read_excel(path = "class_enrollment_summary_by_term_2.11.20.xlsx", skip = 3, n_max = 2879) %>%
+  clean_names()
+
+x
+
+##x %>%
+  ##filter(`course_name` == "Government") %>%
+  ##arrange(desc(`total`))
+```
+
 
