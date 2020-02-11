@@ -1,0 +1,16 @@
+---
+title: "Enrollment Analysis"
+author: "Jack Fetsch"
+date: "2/11/2020"
+output: html_document
+---
+
+
+
+```{r}
+library(readxl)
+library(tidyverse)
+
+read_excel("class_enrollment_summary_by_term_2.11.20.xlsx")
+```
+
